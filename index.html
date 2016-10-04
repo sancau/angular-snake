@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Click to top</title>
+    <link rel="stylesheet" href="styles.css" media="screen">
+  </head>
+  <body ng-app="app" ng-controller="rootCtrl">
+    <div tabindex="0" ng-keyup="keyPressed($event)">
+      <table>
+        <tr ng-repeat="row in field">
+          <td
+            ng-repeat="cell in row track by $index"
+            ng-class="{ 'occupied': cell.occupied, 'halo': cell.halo }"
+            ng-click="cellClicked(cell)"></td>
+        </tr>
+      </table>
+      <hr / >
+      <button ng-click="go()"> Start </button>
+      <button ng-click="stop()"> Pause ('P')</button>
+      <hr />
+    </div>
+  </body>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js">
+  </script>
+  <script src="app.js"></script>
+</html>

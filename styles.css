@@ -1,0 +1,19 @@
+table td {
+  border: 1px solid blue;
+  background-color: lightgrey;
+  width: 20px;
+  height: 20px;
+  opacity: 0.2;
+  /*border-radius: 20px;*/
+}
+
+table td:hover {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.occupied {
+  background-color: green;
+  opacity: 0.6;
+  /*border-radius: 20px;*/
+}
